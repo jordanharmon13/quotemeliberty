@@ -1,0 +1,225 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul,
+footer ul {
+    margin: 0;
+}
+/*regular smartphone screen size. */
+nav ul li,
+footer ul li {
+    display: inline;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+header,
+footer {
+    background-color: lightblue;
+}
+
+.quote_container {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.quotes {
+    display: flex;
+    width: 230px;
+    height: 230px;
+    border: solid black;
+    text-decoration: none;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.quotes>a {
+    display: block;
+    flex: 1;
+}
+
+nav ul li {
+  display: flex;
+  flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: flex-end;
+}
+
+/* This makes the footer stay at the bottom of the page */
+html, body, main { 
+    height: 100%; 
+}
+
+body > main { 
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+
+}
+
+#footer {
+    height: 4em;
+}
+
+/* Medium screens */
+@media all and (max-width: 800px) {
+  nav ul li {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    justify-content: space-around;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  nav ul li {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+}
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+      #wrapper {
+          width: 375px;
+      }
+      
+      
+      
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+      #wrapper {
+          width: 375px;
+      }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+      #wrapper {
+          width: 667px;
+      }
+
+}
+
+/* ----------- iPhone 6+ and Nexus 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+      #wrapper {
+          width: 414px;
+      }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+      #wrapper {
+          width: 414px;
+      }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+      #wrapper {
+          width: 736px;
+      }
+}
+/* nexus 7 */
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) {
+      #wrapper {
+          width: 601px;
+      }
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) 
+  and (orientation: portrait) {
+      #wrapper {
+          width: 601px;
+      }
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 601px) 
+  and (device-height: 906px) 
+  and (-webkit-min-device-pixel-ratio: 1.331) 
+  and (-webkit-max-device-pixel-ratio: 1.332) 
+  and (orientation: landscape) {
+      #wrapper {
+          width: 906px;
+      }
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+      #wrapper {
+          width: 1200px;
+          margin: 0 auto;
+          
+      }
+      
+      nav ul li {
+          display: inline;
+          text-decoration: none;
+          list-style: none;
+          
+      }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+      #wrapper {
+          width: 1200px;
+          margin: 0 auto;
+          
+      }
+}
