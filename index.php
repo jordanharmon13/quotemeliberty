@@ -1,3 +1,4 @@
+<main>
 <?php
 require_once('model/database.php');
 
@@ -19,7 +20,7 @@ switch ($action) {
         break;
     
     case 'quote_add':
-        include 'view/quotes_list.php';
+        include 'view/quote_add.php';
         break;
     
     case 'Submit Quote':
@@ -33,20 +34,23 @@ switch ($action) {
         break;
     
     case 'quotes_popular':
-        include 'view/quotes_list.php';
+        include 'view/quotes_popular.php';
         break;
     
     case 'contact_us':
-        include 'contact/contact.php';
+        include 'view/contact/contact.php';
         break;
     
     case 'teaching_presentation':
-        include 'phpexam/teaching_presentation.php';
+        include 'view/phpexam/teaching_presentation.php';
         break;
     
     case 'quote_page':
-        include 'view/quotes_list.php';
+        include 'view/quote_page.php';
         break;
+    
+    case 'about_us':
+        include 'view/about_us.php';
     
     default:
         include('view/quotes_list.php');
@@ -56,3 +60,5 @@ switch ($action) {
 include('view/footer.php');
 
 ?>
+
+</main>

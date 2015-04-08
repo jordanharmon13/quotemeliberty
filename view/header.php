@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Quote Me Liberty - Liberty Quotes</title>
+        <title><?php echo $title; ?> - Liberty Quotes</title>
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -18,7 +18,7 @@ and open the template in the editor.
     </head>
     <body id="wrapper">
         
-        <header>
+        <header id="header">
         <nav>
             <ul>
                 <li><a href=".?action=quotes_list">Home</a></li>
@@ -26,6 +26,4 @@ and open the template in the editor.
                 <li><a href=".?action=quote_add">Submit Quote</a></li>
             </ul>
         </nav>
-
-            <h1>Quote Me Liberty!</h1>
         </header>

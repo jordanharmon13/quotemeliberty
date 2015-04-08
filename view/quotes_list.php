@@ -1,5 +1,4 @@
-<main>    
-    <?php 
+<?php 
     // quotes_list page
     
     if($action == 'quotes_list') { ?>
@@ -16,23 +15,8 @@
        <?php } ?>
     </ul>
        
-    <?php } else if($action == 'quote_add') {
-        include('view/quote_add.php');
-    
-    } else if ($action == 'quotes_popular') {
-        include('quotes_popular.php');
-    
-    } else if ($action == 'contact_us') {
-       include 'contact/contact.php';
-       
-    } else if ($action == 'quote_page') {
-        include('quote_page.php');
-    
-    } else {
+    <?php } else {
         require('quote.php');
     }
 ?>
-
-    
-</main>
 
