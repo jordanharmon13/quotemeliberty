@@ -1,8 +1,5 @@
 <?php
-    $dsn = 'mysql:host=69.195.124.155;dbname=jordanz6_quote_me_liberty';
-    $username = 'jordanz6';
-    $password = '731731jBh91!';
-
+    include('dbconfig.php');
     try {
         $db = new PDO($dsn, $username, $password);
     } catch (PDOException $e) {
