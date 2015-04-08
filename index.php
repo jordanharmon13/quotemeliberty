@@ -1,4 +1,3 @@
-<main>
 <?php
 require_once('model/database.php');
 
@@ -12,7 +11,11 @@ if ($action == NULL) {
     }
 }
 
-$errors = array();
+$errors = array(); ?>
+
+<main>
+
+<?php
 
 switch ($action) {
     case 'quotes_list':
@@ -56,9 +59,9 @@ switch ($action) {
         include('view/quotes_list.php');
         break;
 }
-
+?>
+      </main>
+      <?php
 include('view/footer.php');
 
 ?>
-
-</main>

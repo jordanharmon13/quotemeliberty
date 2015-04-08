@@ -1,5 +1,5 @@
 <?php
-echo $action;
+
 $quote = get_quote($action);?>
 
 <div>

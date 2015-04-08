@@ -13,10 +13,10 @@ and open the template in the editor.
         
         <link href="stylesheet.css" type="text/css" rel="stylesheet">
         
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
-    <body id="wrapper">
+    <body class="wrapper">
         
         <header id="header">
         <nav>

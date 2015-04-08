@@ -4,7 +4,6 @@
         $quotes = get_quotes(); 
         foreach ($quotes as $quote) { ?>
         <li class="quotes"><a href="?action=<?php echo $quote['quoteID']?>"><?php echo $quote['quote']; ?>
-            <br><span><?php echo $quote['author']; ?></span>
-            <br><span><?php echo $quote['date']; ?></span></a></li>
+            <br><br><span><?php echo $quote['author']; ?></span></a></li>
        <?php } ?>
     </ul>
