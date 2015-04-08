@@ -11,10 +11,10 @@ and open the template in the editor.
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link href="/stylesheet.css" type="text/css" rel="stylesheet">
+        <link href="stylesheet.css" type="text/css" rel="stylesheet">
         
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body id="wrapper">
         
