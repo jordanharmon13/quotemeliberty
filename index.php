@@ -39,6 +39,7 @@ switch ($action) {
             add_quote($quote, $author);
         }
         $title = 'Submit Quote';
+        include('view/quote_added.php');
         break;
     
     case 'quotes_popular':
@@ -64,6 +65,20 @@ switch ($action) {
     case 'about_us':
         include 'view/about_us.php';
         $title = 'About Us';
+        break;
+    
+    case 'quote_delete':
+        $quoteID = filter_input(INPUT_GET, 'quoteID');
+        $delete_quote = delete_quote($quoteID);
+        include'view/quote_deleted.php';
+        break;
+    
+    case 'quote_edit':
+        include('view/quote_edit.php');
+        break;
+    
+    case 'Update Quote':
+        include('view/quote_edited.php');
         break;
     
     default:

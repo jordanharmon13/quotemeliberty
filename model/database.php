@@ -40,11 +40,24 @@
         return $result;
     }
     
-    /*function delete_quote($quoteID) {
-        
+    function delete_quote($quoteID) {
+        global $db;
+        $query = 'DELETE FROM quotes '
+                . 'WHERE quoteID = ' . intval($quoteID);
+        $statement = $db->prepare($query);
+        $statement->execute();
+        $statement->closeCursor();
     }
     
-    function edit_quote($quote, $author, $date) {
-        
-    } */
+    function edit_quote($quoteID, $quote, $author) {
+        global $db;
+        $query = 'UPDATE quotes '
+                . 'SET quote = :quote, author = :author '
+                . 'WHERE quoteID = ' . intval($quoteID);
+        $statement = $db->prepare($query);
+        $statement->bindValue('quote', $quote);
+        $statement->bindValue('author', $author);
+        $statement->execute();
+        $statement->closeCursor();
+    }
 ?>

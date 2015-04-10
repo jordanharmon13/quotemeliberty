@@ -1,5 +1,5 @@
 <h1>Submit Your Own Quote</h1>
-    <form action="database.php" method="post" id="submit_form">
+    <form action="." method="post" id="submit_form">
             <label>Author:</label>
             <textarea rows="5" cols="20" name="quote"></textarea>
         
