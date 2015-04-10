@@ -4,7 +4,7 @@
         $db = new PDO($dsn, $username, $password);
     } catch (PDOException $e) {
         $error_message = $e->getMessage();
-        include('../errors/database_error.php');
+        echo 'There was an error.';
         exit();
     }
     
@@ -39,4 +39,12 @@
         $result = $statement->closeCursor();
         return $result;
     }
+    
+    /*function delete_quote($quoteID) {
+        
+    }
+    
+    function edit_quote($quote, $author, $date) {
+        
+    } */
 ?>

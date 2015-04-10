@@ -87,9 +87,8 @@ body > main {
 
 /* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
+  and (min-width: 375px) 
+  and (max-width: 667px) { 
       .wrapper {
           width: 375px;
       }
@@ -100,10 +99,8 @@ body > main {
 
 /* Portrait */
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
+  and (min-width: 375px) 
+  and (max-width: 667px) { 
       .wrapper {
           width: 375px;
       }
@@ -111,10 +108,8 @@ body > main {
 
 /* Landscape */
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: landscape) { 
+  and (min-width: 375px) 
+  and (max-width: 667px) { 
       .wrapper {
           width: 667px;
       }
@@ -125,9 +120,8 @@ body > main {
 
 /* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
+  and (min-width: 414px) 
+  and (max-width: 736px) { 
       .wrapper {
           width: 414px;
       }
@@ -135,10 +129,8 @@ body > main {
 
 /* Portrait */
 @media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
+  and (min-width: 414px) 
+  and (max-width: 736px) { 
       .wrapper {
           width: 414px;
       }
@@ -146,10 +138,8 @@ body > main {
 
 /* Landscape */
 @media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: landscape) { 
+  and (min-width: 414px) 
+  and (max-width: 736px) { 
       .wrapper {
           width: 736px;
       }
@@ -157,10 +147,8 @@ body > main {
 /* nexus 7 */
 /* Portrait and Landscape */
 @media screen 
-  and (device-width: 601px) 
-  and (device-height: 906px) 
-  and (-webkit-min-device-pixel-ratio: 1.331) 
-  and (-webkit-max-device-pixel-ratio: 1.332) {
+  and (width: 601px) 
+  and (height: 906px) {
       .wrapper {
           width: 601px;
       }
@@ -168,11 +156,8 @@ body > main {
 
 /* Portrait */
 @media screen 
-  and (device-width: 601px) 
-  and (device-height: 906px) 
-  and (-webkit-min-device-pixel-ratio: 1.331) 
-  and (-webkit-max-device-pixel-ratio: 1.332) 
-  and (orientation: portrait) {
+  and (width: 601px) 
+  and (height: 906px) {
       .wrapper {
           width: 601px;
       }
@@ -180,11 +165,8 @@ body > main {
 
 /* Landscape */
 @media screen 
-  and (device-width: 601px) 
-  and (device-height: 906px) 
-  and (-webkit-min-device-pixel-ratio: 1.331) 
-  and (-webkit-max-device-pixel-ratio: 1.332) 
-  and (orientation: landscape) {
+  and (width: 601px) 
+  and (height: 906px) {
       .wrapper {
           width: 906px;
       }
@@ -192,9 +174,8 @@ body > main {
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+  and (min-width: 1200px) 
+  and (max-width: 1600px) {
       .wrapper {
           width: 1200px;
           margin: 0 auto;
@@ -211,9 +192,8 @@ body > main {
 
 /* ----------- Retina Screens ----------- */
 @media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-width: 1200px) 
+  and (max-width: 1600px) 
   and (min-resolution: 192dpi) { 
       .wrapper {
           width: 1200px;
