@@ -15,7 +15,7 @@
             unset($reply);            
             ?>
             <p>All fields are required</p>
-            <form method="post" action="index.php" id="contactform">
+            <form method="post" action=".?action=contact_us" id="contactform">
                 <fieldset>
                     <p>Fill out the following form</p>
                     <label for="firstname">First Name</label>
@@ -32,7 +32,7 @@
                     <label for="captcha">What color is a red apple?</label>
                     <input type="text" name="captcha" id="captcha" size="5"> <br>
                     <label for="action"></label>
-                    <input type="submit" name="action" id="action" value="Send" /><br>
+                    <input type="submit" name="contact_action" id="contact_action" value="Send" /><br>
                 </fieldset>
             </form>
             

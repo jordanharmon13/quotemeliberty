@@ -34,7 +34,9 @@ switch ($action) {
         $quote = filter_input(INPUT_POST, 'quote');
         $author = filter_input(INPUT_POST, 'author');
         if (empty($quote) || empty($author)) {
-            $errors = 'You need to enter a quote or author name.';
+            $errors = 'You need to enter a quote or author name. Go back and try again.';
+            echo $errors;
+            break;
         } else {
             add_quote($quote, $author);
         }
@@ -48,7 +50,7 @@ switch ($action) {
         break;
     
     case 'contact_us':
-        include 'view/contact/contact.php';
+        include 'view/contact/index.php';
         $title = 'Contact Us';
         break;
     

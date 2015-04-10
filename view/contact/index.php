@@ -1,6 +1,14 @@
 <?php 
+
+    $firstname = '';
+$lastname = '';
+$email = '';
+$subject = '';
+$message = '';
+$captcha = '';
+
     
-if ($_POST['action'] == 'Send'){ 
+if (filter_input(INPUT_POST, 'contact_action') == 'Send'){ 
     // Collect the data
 
     $firstname = $_POST['firstname'];
@@ -37,11 +45,7 @@ if ($_POST['action'] == 'Send'){
 
     }
 
-} else {
 
-    include 'contact.php';
-    
-}  
 // Assemble the message
 $finalmessage = "Name: $firstname $lastname \n";
 
@@ -65,16 +69,16 @@ if ($result == TRUE) {
 
     $reply = "Thank you $firstname for contacting me.";
 
-unset($firstname);
-
-unset($lastname);
-
-unset($email);
-
-unset($subject);
-
-unset($message);
-
+    $firstname = '';
+    
+    $lastname = '';
+    
+    $email = '';
+    
+    $subject = '';
+    
+    $message = '';
+    
 include 'contact.php';
 
 exit;
@@ -98,4 +102,11 @@ include 'contact.php';
 exit;
 
 }
+}
+
+else {
+
+    include 'contact.php';
+    
+}  
 ?>
