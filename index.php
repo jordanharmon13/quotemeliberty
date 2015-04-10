@@ -3,8 +3,6 @@ require_once('model/database.php');
 
 $title;
 
-include('view/header.php');
-
 $action = filter_input(INPUT_POST, 'action');
 if ($action == NULL) {
     $action = filter_input(INPUT_GET, 'action');
@@ -21,16 +19,21 @@ $errors = array(); ?>
 
 switch ($action) {
     case 'quotes_list':
-        include 'view/quotes_list.php';
         $title = 'Quote Me Liberty';
+        include('view/header.php');
+        include 'view/quotes_list.php';
         break;
     
     case 'quote_add':
-        include 'view/quote_add.php';
+        
         $title = 'Add Quote';
+        include('view/header.php');
+        include 'view/quote_add.php';
         break;
     
     case 'Submit Quote':
+        $title = 'Submit Quote';
+        include('view/header.php');
         $quote = filter_input(INPUT_POST, 'quote');
         $author = filter_input(INPUT_POST, 'author');
         if (empty($quote) || empty($author)) {
@@ -40,50 +43,62 @@ switch ($action) {
         } else {
             add_quote($quote, $author);
         }
-        $title = 'Submit Quote';
         include('view/quote_added.php');
         break;
     
     case 'quotes_popular':
-        include 'view/quotes_popular.php';
         $title = 'Popular Quotes';
+        include('view/header.php');
+        include 'view/quotes_popular.php';
         break;
     
     case 'contact_us':
-        include 'view/contact/index.php';
         $title = 'Contact Us';
+        include('view/header.php');
+        include 'view/contact/index.php';
         break;
     
     case 'teaching_presentation':
-        include 'view/phpexam/teaching_presentation.php';
         $title = 'Teaching Presentation';
+        include('view/header.php');
+        include 'view/phpexam/teaching_presentation.php';
         break;
     
     case 'quote_page':
-        include 'view/quote_page.php';
         $title = 'Quote';
+        include('view/header.php');
+        include 'view/quote_page.php';
         break;
     
     case 'about_us':
-        include 'view/about_us.php';
         $title = 'About Us';
+        include('view/header.php');
+        include 'view/about_us.php';
         break;
     
     case 'quote_delete':
+        $title = 'Delete Quote';
+        include('view/header.php');
         $quoteID = filter_input(INPUT_GET, 'quoteID');
         $delete_quote = delete_quote($quoteID);
         include'view/quote_deleted.php';
         break;
     
     case 'quote_edit':
+        $title = 'Edit Quote';
+        include('view/header.php');
         include('view/quote_edit.php');
         break;
     
     case 'Update Quote':
+        $title = 'Update Quote';
+        include('view/header.php');
         include('view/quote_edited.php');
         break;
     
     default:
+        $title = 'Quote Me Liberty';
+        include('view/header.php');
         include('view/quotes_list.php');
         break;
 }
